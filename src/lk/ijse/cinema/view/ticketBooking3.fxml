@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1090.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.cinema.controller.TicketBookingController3">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="5.0" prefHeight="787.0" prefWidth="603.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label alignment="CENTER" layoutY="14.0" prefHeight="39.0" prefWidth="603.0" style="-fx-background-color: #f7dc6f;" text="Customer Details" textFill="#111111">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="custId" labelFloat="true"  layoutX="14.0" layoutY="95.0" onAction="#checkID" prefHeight="44.0" prefWidth="330.0" promptText="Customer ID">
+               <font>
+                  <Font size="20.0" />
+               </font></JFXTextField>
+            <Label alignment="CENTER" layoutY="397.0" prefHeight="44.0" prefWidth="603.0" style="-fx-background-color: #eee8cd;" text="Payment Details">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="591.0" prefHeight="58.0" prefWidth="122.0" text="Amount( Rs.):">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="amount" layoutX="153.0" layoutY="604.0" prefHeight="36.0" prefWidth="175.0" style="-fx-background-color: #eee8cd;">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Button layoutX="179.0" layoutY="682.0" mnemonicParsing="false" onAction="#addReservation" prefHeight="36.0" prefWidth="206.0" style="-fx-background-color: #f7dc6f;" text="Print Bill" />
+            <Button layoutX="404.0" layoutY="682.0" mnemonicParsing="false" onAction="#viewPrevious" prefHeight="36.0" prefWidth="142.0" style="-fx-background-color: #f7dc6f;" text="Cancel" />
+            <JFXTextField fx:id="custContactNo" labelFloat="true"  layoutX="14.0" onAction="#checkContactNo"  layoutY="243.0" prefHeight="44.0" prefWidth="330.0" promptText="Contact No">
+               <font>
+                  <Font size="20.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="custName" labelFloat="true"  layoutX="14.0" layoutY="166.0" onAction="#checkName"  prefHeight="46.0" prefWidth="330.0" promptText="Customer Name">
+               <font>
+                  <Font size="20.0" />
+               </font></JFXTextField>
+            <Label layoutX="24.0" layoutY="482.0" prefHeight="36.0" prefWidth="122.0" text="Date            :">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="pDate" layoutX="153.0" layoutY="486.0" prefHeight="36.0" prefWidth="175.0" style="-fx-background-color: #eee8cd;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSave" layoutX="406.0" layoutY="324.0" mnemonicParsing="false" onAction="#saveCustomer" prefHeight="36.0" prefWidth="142.0" style="-fx-background-color: #f7dc6f;" text="Save" />
+            <Label layoutX="24.0" layoutY="539.0" prefHeight="36.0" prefWidth="128.0" text="Payment ID :">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="pid" layoutX="154.0" layoutY="544.0" prefHeight="36.0" prefWidth="175.0" style="-fx-background-color: #eee8cd;" />
+            <ImageView fitHeight="46.0" fitWidth="47.0" layoutX="120.0" layoutY="679.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="617.0" layoutY="22.0" prefHeight="758.0" prefWidth="479.0" style="-fx-background-color: #8b8878;">
+         <children>
+            <Label layoutX="8.0" layoutY="19.0" prefHeight="46.0" prefWidth="398.0" text="Ticket Summary" textFill="#090909">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <Label fx:id="name" layoutX="8.0" layoutY="77.0" prefHeight="36.0" prefWidth="382.0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="153.0" prefHeight="46.0" prefWidth="106.0" text="Tickets : F:">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="full" alignment="CENTER" layoutX="129.0" layoutY="158.0" prefHeight="36.0" prefWidth="47.0" style="-fx-background-color: #8b8878;" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="191.0" layoutY="153.0" prefHeight="46.0" prefWidth="47.0" text="H:">
+               <font>
+                  <Font size="23.0" />
+               </font></Label>
+            <Label fx:id="half" alignment="CENTER" layoutX="238.0" layoutY="153.0" prefHeight="46.0" prefWidth="88.0" style="-fx-background-color: #8b8878;" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Separator layoutX="3.0" layoutY="59.0" opacity="0.5" prefHeight="24.0" prefWidth="467.0" />
+            <Label layoutX="11.0" layoutY="294.0" prefHeight="46.0" prefWidth="142.0" text="Total Price  :">
+               <font>
+                  <Font size="23.0" />
+               </font></Label>
+            <Separator layoutX="9.0" layoutY="277.0" opacity="0.5" prefHeight="2.0" prefWidth="477.0" />
+            <Label fx:id="totalPrice" layoutX="221.0" layoutY="294.0" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #8b8878;" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font></Label>
+            <RadioButton fx:id="rbtnOffer" layoutX="8.0" layoutY="364.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="350.0" text="Special Offer Available" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font size="23.0" />
+               </font></RadioButton>
+            <Label layoutX="20.0" layoutY="443.0" prefHeight="46.0" prefWidth="115.0" text="Discount  :">
+               <font>
+                  <Font size="23.0" />
+               </font></Label>
+            <Label fx:id="discount" layoutX="218.0" layoutY="444.0" prefHeight="46.0" prefWidth="156.0" style="-fx-background-color: #8b8878;" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <Label layoutX="21.0" layoutY="534.0" prefHeight="36.0" prefWidth="135.0" text="Net Total  :">
+               <font>
+                  <Font size="23.0" />
+               </font></Label>
+            <Label fx:id="netTotal" layoutX="218.0" layoutY="526.0" prefHeight="46.0" prefWidth="156.0" style="-fx-background-color: #8b8878;" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font></Label>
+            <Label fx:id="date" layoutX="13.0" layoutY="117.0" prefHeight="36.0" prefWidth="135.0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="215.0" prefHeight="36.0" prefWidth="88.0" text="Seat No:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="seat" layoutX="91.0" layoutY="215.0" prefHeight="36.0" prefWidth="198.0" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="show" layoutX="157.0" layoutY="117.0" prefHeight="36.0" prefWidth="128.0">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
